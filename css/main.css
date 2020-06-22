@@ -1341,7 +1341,7 @@ pre code {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #28e56a;
+  background: #fb05c1;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2391,6 +2391,13 @@ ul.breadcrumb li + li:last-child {
 }
 .gt-container .gt-popup .gt-action.is--active::before {
   top: 0.7em;
+}
+mjx-container[jax="CHTML"][display="true"],
+.has-jax {
+  overflow: auto hidden;
+}
+mjx-container[display="true"] + br {
+  display: none;
 }
 .header {
   align-self: stretch;
