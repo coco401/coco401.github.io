@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.2.1">
@@ -20,14 +20,14 @@
     var CONFIG = {"hostname":"coco401.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.3","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="近期在leetcode遇到的一道hard题 ，了解到了Rabin-Karp算法。原题如下：  给出一个字符串 S，考虑其所有重复子串（S 的连续子串，出现两次或多次，可能会有重叠）。返回任何具有最长可能长度的重复子串。（如果 S 不含重复子串，那么答案为 “”。）  一个很自然的想法是假设一个长度为L的子串，然后查找这个长度的子串是否是重复的。由于如果L长度子串有重复的，则L-1也必定满足拥有重复">
+  <meta name="description" content="Rabin-Karp算法，是由M.O.Rabin和R.A.Karp发明的一种基于哈希函数的字符串查找算法。 近期在leetcode遇到的一道hard题 ，了解到了Rabin-Karp算法。原题如下：  给出一个字符串 S，考虑其所有重复子串（S 的连续子串，出现两次或多次，可能会有重叠）。返回任何具有最长可能长度的重复子串。（如果 S 不含重复子串，那么答案为 “”。）  一个很自然的想法是假设一">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Rabin-Karp 算法">
 <meta property="og:url" content="http://coco401.github.io/2020/06/20/Rabin-Karp%20%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="春夏秋冬">
-<meta property="og:description" content="近期在leetcode遇到的一道hard题 ，了解到了Rabin-Karp算法。原题如下：  给出一个字符串 S，考虑其所有重复子串（S 的连续子串，出现两次或多次，可能会有重叠）。返回任何具有最长可能长度的重复子串。（如果 S 不含重复子串，那么答案为 “”。）  一个很自然的想法是假设一个长度为L的子串，然后查找这个长度的子串是否是重复的。由于如果L长度子串有重复的，则L-1也必定满足拥有重复">
+<meta property="og:description" content="Rabin-Karp算法，是由M.O.Rabin和R.A.Karp发明的一种基于哈希函数的字符串查找算法。 近期在leetcode遇到的一道hard题 ，了解到了Rabin-Karp算法。原题如下：  给出一个字符串 S，考虑其所有重复子串（S 的连续子串，出现两次或多次，可能会有重叠）。返回任何具有最长可能长度的重复子串。（如果 S 不含重复子串，那么答案为 “”。）  一个很自然的想法是假设一">
 <meta property="article:published_time" content="2020-06-21T03:05:57.000Z">
-<meta property="article:modified_time" content="2020-06-23T22:26:14.868Z">
+<meta property="article:modified_time" content="2020-06-24T01:19:22.099Z">
 <meta property="article:author" content="匆匆">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -81,12 +81,12 @@
   .sidebar-panel { display: block; }
   </style>
   <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container use-motion">
+  <div class="container use-motion">
     <div class="headband"></div>
 
     <main class="main">
@@ -157,12 +157,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -236,7 +236,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-23 15:26:14" itemprop="dateModified" datetime="2020-06-23T15:26:14-07:00">2020-06-23</time>
+                <time title="Modified: 2020-06-23 18:19:22" itemprop="dateModified" datetime="2020-06-23T18:19:22-07:00">2020-06-23</time>
               </span>
 
           
@@ -250,7 +250,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>近期在leetcode遇到的一道hard题 ，了解到了Rabin-Karp算法。原题如下：</p>
+        <p>Rabin-Karp算法，是由M.O.Rabin和R.A.Karp发明的一种基于哈希函数的字符串查找算法。</p>
+<p>近期在leetcode遇到的一道hard题 ，了解到了Rabin-Karp算法。原题如下：</p>
 <blockquote>
 <p>给出一个字符串 S，考虑其所有重复子串（S 的连续子串，出现两次或多次，可能会有重叠）。返回任何具有最长可能长度的重复子串。（如果 S 不含重复子串，那么答案为 “”。）</p>
 </blockquote>
@@ -299,7 +300,10 @@
     <a href="/2020/06/19/hello-world/" rel="prev" title="Hello World">
       <i class="fa fa-chevron-left"></i> Hello World
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/24/math-in-ML-1/" rel="next" title="机器学习中的数学 线性代数">
+      机器学习中的数学 线性代数 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -475,7 +479,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
     gitalk.render('gitalk-container');
   }, window.Gitalk);
 });
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
 </html>
