@@ -3,6 +3,8 @@ title: Rabin-Karp 算法
 date: '2020-06-21'
 tags:
 - 算法
+aliases:
+- posts/Rabin-Karp 算法
 ---
 
 Rabin-Karp算法，是由M.O.Rabin和R.A.Karp发明的一种基于哈希函数的字符串查找算法。

@@ -3,6 +3,8 @@ title: Hello World
 date: '2020-06-20'
 tags:
 - hexo
+aliases:
+- posts/hello-world
 ---
 
 这是我得用[Hexo](https://hexo.io/)写的第一篇博客，感谢[Hexo官网的教程](https://hexo.io/docs/)。下面是一些简单使用Hexo的方法。会随着我对Hexo的了解不断更新。

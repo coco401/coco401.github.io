@@ -1,4 +1,8 @@
-
+---
+title: Epona & DreamerAD
+aliases:
+- posts/Epona & DreamerAD
+---
 
 ##  World Model with Latent Reward Modeling
 

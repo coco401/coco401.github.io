@@ -3,6 +3,8 @@ title: 【hexo施工中】添加live2d、评论系统、文章阅读量显示
 date: '2020-06-25'
 tags:
 - hexo
+aliases:
+- posts/【hexo施工中】添加live2d和评论系统
 ---
 
 ## live2d

@@ -3,6 +3,8 @@ title: BFS,DFS,拓扑排序
 date: '2020-06-27'
 tags:
 - 算法
+aliases:
+- posts/BFS
 ---
 
 ## 宽度优先搜索

@@ -3,6 +3,8 @@ title: 机器学习中的数学 线性代数
 date: '2020-06-24'
 tags:
 - 机器学习
+aliases:
+- posts/math-in-ML-1
 ---
 
 机器学习：data，model，learning
